@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--Okeke Lab Home Page-->
+<html>
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<title>OkekeLab Molecular Bology Laboratory Webpage</title>
+	<meta name="description" content="Welcome to Okeke Lab at the University of Ibadan, Nigeria run by Iruka N Okeke. Our research covers mechanisms in bacterial 
+	pathogens, animicrobial resistance, phyllosphere, and drug discovery for neglected bacteria using genomics and molecular biology methods.">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header id="container">
+      <div id="logo">
+        <a href="index.html">
+          <img class=logo-img src="images/ol_logo_final-nobg.png" alt="OkekeLab Logo">
+        </a>
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+		<a href="members.html">Members</a>
+		<div class="dropdown">
+		  <button class="dropbtn">Resources
+		  </button>
+		  <div class="dropdown-content">
+			<a href="resources/genomic_surveillance_support.html">Genomic Surveillance Support</a>
+			<a href="https://scholar.google.com/citations?hl=en&user=KCc3tdAAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Publications</a>
+		    <a href="#">Courses</a>
+		  </div>
+		</div>
+        <a class="active" href="contact.html">Contact</a>
+		<a href="blog.html">Blog</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+	  </div>
+    </header>
+
+    <div class="breaker" style="height: 34px;"></div>
+	<div id="contact-top-wrapper">
+    <h1 id="page-title">Contact Us</h1>
+    <p class="contact-about">Welcome to the website of Iruka N. Okeke and her Molecular Microbiology lab. 
+        We are located in the Department of Pharmaceutical Microbiology, Faculty of Pharmacy at the 
+        <a href="http://pgcollege.ui.edu.ng/" target="_blank">University of Ibadan</a>, 
+        Nigeria’s premier hub of interdisciplinary science.</p>
+        
+  </div>
+  
+    <div id="contact-div"> 
+      <div id="address">
+        <br>
+        <address>Department of Pharmaceutical Microbiology<br>
+        Faculty of Pharmacy<br>
+        University of Ibadan, Ibadan<br>
+        Oyo State<br>
+        Nigeria</address>
+        <br>
+        <p>Working hours: Mon-Fri 8am-4pm</p>
+        <p>E-mail: nigeriaghru@gmail.com</p>
+      </div>  
+      <div id="map"></div>
+      <form id="form" name="contact-form" method="POST"
+        action="#">
+            <h3>Send us a message:</h3>
+            <input type="text" name="name" id="name" class="field" placeholder="Enter your name" required>
+
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <textarea id="content" name="content" placeholder="Enter your message here..." required></textarea>
+            <div>
+              <input type="submit" id="submit" name="send" value="Send">
+              <div id="statusMessage"> 
+                <?php
+                if (! empty($message)) {
+                    ?>
+                    <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                <?php
+                }
+                ?>
+              </div>
+            </div>
+        </form>    
+                
+    </div>
+    <br>
+    <div id="footer" class="contact-footer">
+		<div>
+			<p>
+				<span>Website created by <a href="members.html#erkison" target="_blank">Erkison</a> | 2020 &copy; OkekeLab. </span>
+			</p>
+			<ul>
+				<li id="facebook">
+					<a href="#">facebook</a>
+				</li>
+				<li id="twitter">
+					<a href="#">twitter</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of University of Ibadan
+          var uniibadan = {lat: 7.4443, lng: 3.8995};
+          // The map, centered at Uniibadan
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 5, center: uniibadan});
+          // The marker, positioned at Uniibadan
+          var marker = new google.maps.Marker({position: uniibadan, map: map});
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7zxni0O7GYeSxLVh-t2F3yTLZVg-UKuU&callback=initMap"></script>
+    <script type="text/javascript" src="jsfile.js"></script>
+</body>
+</html>

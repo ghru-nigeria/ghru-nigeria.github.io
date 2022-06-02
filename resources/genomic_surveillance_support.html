@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--Okeke Lab Home Page-->
+<html>
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>OkekeLab Genomic Surveillance Support</title>
+  <meta name="description" content="Okeke Lab at the University of Ibadan is run by Iruka N Okeke and works closely with colaborators including GHRU-GSAR, DTUFood, NCDC, Africa CDC, amongst others
+   as a whole genome sequencing hub in Nigeria and West Africa to provide researchers and institutions with WGS as a tool to improve antimicrobial resistance 
+   in africa">
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/w3.css">
+</head>
+
+<body>
+  <header id="container">
+      <div id="logo">
+        <a href="index.html">
+          <img class=logo-img src="../images/ol_logo_final-nobg.png" alt="OkekeLab Logo">
+        </a>
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="../index.html">Home</a>
+		    <a href="../members.html">Members</a>
+		    <div class="dropdown active">
+		      <button class="dropbtn">Resources
+		      </button>
+		      <div class="dropdown-content">
+		        <a href="../resources/genomic_surveillance_support.html">Genomic Surveillance Support</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=KCc3tdAAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Publications</a>
+            <a href="#">Courses</a>
+		      </div>
+		    </div>
+        <a href="../contact.html">Contact</a>
+        <a href="../blog.html">Blog</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+	    </div>
+    </header>
+    <div class="breaker" style="height: 60px;"></div>
+	
+  <h1 id="page-title">OkekeLab Genomic Surveillance Support</h1>
+  
+
+  <p id="body-content">The detailed description of the support we currently offer
+    as part of the GHRU and SeqAfrica projects can be added here. The form
+    below would be modified to collect all necessary information we need.
+  </p>
+  <form id="survey-form">
+    <p class="sr-description">Please fill the form below to enable us schedule sample transport</p>
+    <div>
+      <label id="label" for="name">Name:</label>
+      <input type="text" name="name" id="name" class="field" placeholder="Enter your name" required>
+    </div>
+    <div>
+      <label id="label" for="email">Email:</label>
+      <input type="email" name="email" id="email" class="field" placeholder="Enter your email" required>
+    </div>
+    <div>
+      <label id="label" for="sample-number">Number of samples:</label>
+      <input type="number" name="sample-number" id="number" class="field" placeholder="Enter number of samples" min="0" max="5000" required>
+    </div>
+    <div>
+      <p>Please select your country</p>
+      <select id="dropdown" name="country" class="field" required="">
+        <option disabled="" selected="" value="">Select your country</option>
+        <option value="ghana">Ghana</option>
+        <option value="nigeria">Nigeria</option>
+        <option value="benin">Benin</option>
+        <option value="togo">Togo</option>
+        <option value="ivorycoast">Ivory Coast</option>
+      </select>
+    </div>
+    <div id="service">
+      <p>Select service required</p>
+      <label>
+        <input name="services" value="sequencing-only" type="radio" checked>Sequencing Only
+      </label>
+      <label>
+        <input name="services" value="sequencing-and-bioinformatics" type="radio" checked>Sequencing and Bioinformatics
+      </label>
+    </div>
+    <div id="service-spec">
+      <p>What bioinformatics analyses do you require? Check all that apply.</p>
+      <label>
+        <input name="bioinformatics" value="snp-phylogeny" type="checkbox">SNP Phylogeny
+      </label>
+      <label>
+        <input name="bioinformatics" value="amr-prediction" type="checkbox">AMR Prediction
+      </label>
+      <label>
+        <input name="bioinformatics" value="plasmid-detection" type="checkbox">Plasmid Detection
+      </label>
+    </div>
+    <div>
+      <p>Please enter any extra information below:</p>
+      <textarea id="comment" name="comment" placeholder="Enter any additional information here..."></textarea>
+    </div>
+    <div>
+      <button type="submit" id="submit"><strong>Submit</strong>
+      </button>
+    </div>
+  </form>
+
+  <br>
+	<div id="footer">
+		<div>
+			<p>
+				<span>Website created by <a href="../members.html#erkison" target="_blank">Erkison</a> | 2020 &copy; OkekeLab. </span>
+			</p>
+			<ul>
+				<li id="facebook">
+					<a href="#">facebook</a>
+				</li>
+				<li id="twitter">
+					<a href="#">twitter</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="../jsfile.js"></script>
+  </body>
+</html>

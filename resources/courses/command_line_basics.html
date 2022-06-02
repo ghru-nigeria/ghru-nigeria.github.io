@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--Okeke Lab Courses Page-->
+<html>
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>OkekeLab Courses: Linux command line basics</title>
+<link rel="stylesheet" href="../../css/style.css" type="text/css">
+<link rel="stylesheet" href="../../css/w3.css">
+</head>
+
+<body>
+  <header id="container">
+    <div id="logo">
+      <a href="../../index.html">
+        <img class=logo-img src="../../images/ol_logo_final-nobg.png" alt="OkekeLab Logo">
+      </a>
+    </div>
+    <div class="topnav" id="myTopnav">
+      <a href="../../index.html">Home</a>
+      <a href="../../members.html">Members</a>
+      <div class="dropdown">
+        <button class="dropbtn">Resources
+        </button>
+        <div class="dropdown-content">
+          <a href="../../resources/genomic_surveillance_support.html">Sequencing Support</a>
+          <a href="https://scholar.google.com/citations?hl=en&user=KCc3tdAAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Publications</a>
+          <a href="#">Courses</a>
+        </div>
+      </div>
+      <a href="../../contact.html">Contact</a>
+      <a class="active" href="../../blog.html">Blog</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+  </header>
+
+  <div class="breaker" style="height: 50px;"></div>
+
+  <div class="menunav1">
+    <a href="javascript:void(0);" class="icon" onclick="navmenuFunction()">&#9776;</a>
+  </div>
+  <nav id="navbar" class="menunav">
+    <a href="javascript:void(0);" class="icon" onclick="navmenuFunction()">&#9776;</a>
+    <h3>In this article</h3>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#What_is_the_command_line?">What is the command line?</a></li>
+      <li><a class="nav-link" href="#The_Linux_file_structure">The Linux file structure</a></li>
+      <li><a class="nav-link" href="#Commands">Commands</a></li>
+      <li><a class="nav-link" href="#Useful_commands_you_should_know">Useful commands you should know</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+    <br>
+    <h1 id="page-title">Linux Command Line Basics</h1>
+    <section class="main-section" id="Introduction">
+      <br><br>
+      <header id="section-title">Introduction
+      </header>
+      <article>
+        <p>
+          
+          Running bioinformatics analyses entirely on graphical user interfaces is very easy and convenient, particularly if you are new to bioinformatics or are a scientist who just needs to run a few analyses but not dive into the fundamentals. In fact, this realization has resulted in the development of several useful and freely available GUI-based bioinformatics tools, in part to expand scientists' access to these analyses. However, more often than not, these GUI tools are insufficient for the needs of day to day bioinformatics. Enter Linux and the command line.
+
+        </p>
+        <p>
+          
+          For a number of reasons that are outside the scope of this short course, the combination of the Linux operating system and the command line interface unlocks powerful bioinformatics capabilities that are not possible on GUI-based tools and programs. We have designed this course to introduce you to the fundamentals of the Linux command line interface and provide you with the needed information for you to get started using bioinformatics tools on the command line interface.
+          
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="What_is_the_command_line?">
+      <br><br>
+      <header id="section-title">What is the command line?
+      </header>
+      <article>
+        <p>
+          The command line interface or shell or terminal is basically a program, like most things on a computer. The command line provides a text-based user interface that, in its most basic use case, allows a user to type and run 'commands' (or other programs) that are executed to perform definite tasks. This might seem like a lot to wrap your head around, but it really is simple. Think of your computer, which probably has a GUI. On your computer you have several installed programs that can be "launched" or "executed" when you click on them. These GUI programs often depend on these "click" actions in order to execute what the user intends. You click to play videos, click to pause, click to open files and click to close them. In there exists the major difference between CLI and GUI: in the command line interface, you need to type and run commands to execute them. The executed programs run are either built-in commands or external installed programs. We would see some examples as we progress through the course.
+        </p>
+        <p>
+          Linux and MacOS systems have a default or built-in unix shell or terminal. On Windows machines, however, the default command line interface is not unix-based and to run Linux commands on these machines, you would need to install a Linux shell. Some available options are <a href="https://cygwin.com/install.html" target="_blank>Cygwin</a>,<a href="https://git-scm.com/download/win" target="_blank>Git Bash</a>, or if you own a Windows 10 machine you could install the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows subsystem for Linux</a>. Okay we have laid the foundations. Now let us launch our shells and dive right in!
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="The_Linux_file_structure">
+      <br><br>
+      <header id="section-title">The Linux file structure
+      </header>
+      <article>
+        <p>
+          The Linux file system is a wide topic. We could introduce file structure, Linux as a multiuser operating system, user files, system files, file permissions etc and we still would not have scratched the surface. The good news is we do not need to get into those intricacies in order to get started. Here would only look at the Linux file structure as that is crucial to understanding the subsequent topics. First, let's define files and directories. Files are simply objects that hold bits of information; this could be data, settings or programs. Directories are simply files (you would probably know them as "folders") that contain other files or directories. The Linux file hierarchy is the structure or order of directories and files within the Linux system. The conserved hierarchical structure of this arrangement within Linux systems is very important for many reasons but one that requires mention here is the fact that it allows programs to be able to locate system configuration files across different Linux distributions. As you use and get more familiar with Linux systems, you would understand why this is very important. For now it would suffice to note that this structure is critical to the optimal functioning of the Linux system. Most Linux systems would contain a directory structure as shown below.
+        </p>
+        <img src="#" alt="Linux file structure"> 
+        <p>
+          Let us explain some core concepts regarding this structure before exploring the important aspects seen in the figure above. Directories that contain other directories or files are referred to as parent directories relative to the objects they contain while the directories they contain are referred to as child directories relative to the parent. The relationship between parent and children directories are denoted by forward slashes which separate a parent from a direct child. The top-most directory in all systems is the root directory, denoted by a forward slash (/). All other directories in the system are contained within this directory.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Commands">
+      <br><br>
+      <header id="section-title">Commands
+      </header>
+      <article>
+        <p>
+          A command is basically an instruction given to a computer in order to perform a specific task. 
+          
+          <code>ewomazino@Ewomazino:~$ cd test_directory.txt</code>
+        </p>
+        <p>
+          For a number of reasons that are outside the scope of this short course, the combination of the Linux operating system and the command line interface unlocks powerful bioinformatics capabilities that are not possible on GUI-based tools and programs. We have designed this course to introduce you to the fundamentals of the Linux command line interface and provide you with the needed information for you to get started using bioinformatics tools on the command line interface.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Useful_commands_you_should_know">
+      <br><br>
+      <header id="section-title">Useful commands you should know
+      </header>
+      <article>
+        <p>
+          <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+          <code></code>
+        </p>
+        <p>
+          For a number of reasons that are outside the scope of this short course, the combination of the Linux operating system and the command line interface unlocks powerful bioinformatics capabilities that are not possible on GUI-based tools and programs. We have designed this course to introduce you to the fundamentals of the Linux command line interface and provide you with the needed information for you to get started using bioinformatics tools on the command line interface.
+          <code></code>
+        </p>
+      </article>
+    </section>
+  </main>
+  <script type="text/javascript" src="jsfile.js"></script>
+
+</body>
+
+  
+</html>

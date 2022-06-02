@@ -1,0 +1,77 @@
+<html>
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="erkison.css" type="text/css">
+</head>
+<body>
+  <nav class="my_navbar" id="navbar">
+    <ul>
+      <li><a href="#welcome-section">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact-section">Contact</a></li>
+      <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
+    </ul>
+  </nav>
+  <section id="welcome-section">
+    <h1>Call me Erkison</h1>
+    <p>I'm a bioinformatician and software developer</p>
+    <a id="arrow" class="fa fa-arrow-down" href="#projects"></a>
+  </section>
+  <section id="projects">
+    <h2>Here are some of my projects</h2>
+    <div class="projects-grid">
+      <a href="https://erkison.github.io/index.html" target="_blank" class="project-tile">
+        <img class="project-image" src="https://erkison.github.io/images/ol_logo_final-nobg.png" alt="project image">
+        <p class="project-title">
+          <span>&lt;</span>OkekeLab Website<span>/&gt;</span>
+        </p>
+      </a>
+      <a href="https://gitlab.com/bioinfo_erkison/snippets" target="_blank" class="project-tile">
+        <img class="project-image" src="https://upload.wikimedia.org/wikipedia/commons/1/18/GitLab_Logo.svg" alt="code image">
+        <p class="project-title">
+          <span>&lt;</span>Bioinformatics scripts<span>/&gt;</span>
+        </p>
+      </a>
+      <a href="https://gitlab.com/bioinfo_erkison/gene-word-cloud-creator" target="_blank" class="project-tile">
+        <img class="project-image" src="images/res_word.PNG" alt="word map image">
+        <p class="project-title">
+          <span>&lt;</span>Word map builder<span>/&gt;</span>
+        </p>
+      </a>
+    </div>
+  </section>
+  <section id="contact-section">
+    <div class="contact-section-header">
+      <h2>Let us build together</h2>
+    </div>
+    <div class="contact-links">
+      <a id="profile-link" class="contact-details" href="https://github.com/Erkison" target="_blank">
+        <i class="fa fa-github-square" ::before></i>Github
+      </a>
+      <a class="contact-details" href="mailto:erkisonodih@gmail.com" target="_blank">
+        <i class="fa fa-envelope-square" ::before></i>Email me
+      </a>
+      <a class="contact-details" href="https://twitter.com/bioinfo_erkison" target="_blank">
+        <i class="fa fa-twitter-square" ::before></i>Twitter
+      </a>
+      <a class="contact-details" href="https://www.linkedin.com/in/erkison-odih-949262104/" target="_blank">
+        <i class="fa fa-linkedin-square" ::before></i>LinkedIn
+      </a>
+      <a class="contact-details" href="https://orcid.org/0000-0003-4503-9403" target="_blank">
+        <i class="fa fa-info-circle" ::before></i>Orcid
+      </a>
+    </div>
+  </section>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("navbar");
+      if (x.className === "my_navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "my_navbar";
+      }
+    }
+  </script>
+</body>
+</html>
